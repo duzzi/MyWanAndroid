@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.duzzi.uilib.bottombar.BottomBarLayout
+        android:id="@+id/bottom_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_bottom_bar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/bye_burger_bottom_behavior"
+        >
+
+        <com.duzzi.uilib.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:paddingTop="@dimen/padding_4dp"
+            app:hasText="true"
+            app:iconHeight="@dimen/height_20dp"
+            app:iconNormal="@drawable/ic_home_normal"
+            app:iconSelected="@drawable/ic_home_select"
+            app:iconWidth="@dimen/width_20dp"
+            app:itemMarginTop="@dimen/padding_2dp"
+            app:itemText="@string/home"
+            app:itemTextSize="@dimen/text_11sp"
+            app:openTouchBg="false"
+            app:textColorNormal="@color/textNormalColor"
+            app:textColorSelected="@color/textSelectColor"
+            app:touchDrawable="@null"
+            />
+
+        <com.duzzi.uilib.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:paddingTop="@dimen/padding_4dp"
+            app:hasText="true"
+            app:iconHeight="@dimen/height_20dp"
+            app:iconNormal="@drawable/ic_nav_normal"
+            app:iconSelected="@drawable/ic_nav_select"
+            app:iconWidth="@dimen/width_20dp"
+            app:itemMarginTop="@dimen/padding_2dp"
+            app:itemText="@string/nav"
+            app:itemTextSize="@dimen/text_11sp"
+            app:openTouchBg="false"
+            app:textColorNormal="@color/textNormalColor"
+            app:textColorSelected="@color/textSelectColor"
+            app:touchDrawable="@null"
+            />
+
+        <com.duzzi.uilib.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:paddingTop="@dimen/padding_4dp"
+            app:hasText="true"
+            app:iconHeight="@dimen/height_20dp"
+            app:iconNormal="@drawable/ic_hierarchy_normal"
+            app:iconSelected="@drawable/ic_hierarchy_select"
+            app:iconWidth="@dimen/width_20dp"
+            app:itemMarginTop="@dimen/padding_2dp"
+            app:itemText="@string/system"
+            app:itemTextSize="@dimen/text_11sp"
+            app:openTouchBg="false"
+            app:textColorNormal="@color/textNormalColor"
+            app:textColorSelected="@color/textSelectColor"
+            app:touchDrawable="@null"
+            />
+
+        <com.duzzi.uilib.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:paddingTop="@dimen/padding_4dp"
+            app:hasText="true"
+            app:iconHeight="@dimen/height_20dp"
+            app:iconNormal="@drawable/ic_project_normal"
+            app:iconSelected="@drawable/ic_project_select"
+            app:iconWidth="@dimen/width_20dp"
+            app:itemMarginTop="@dimen/padding_2dp"
+            app:itemText="@string/project"
+            app:itemTextSize="@dimen/text_11sp"
+            app:openTouchBg="false"
+            app:textColorNormal="@color/textNormalColor"
+            app:textColorSelected="@color/textSelectColor"
+            app:touchDrawable="@null"
+            />
+
+
+    </com.duzzi.uilib.bottombar.BottomBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email"/>
+
+</android.support.design.widget.CoordinatorLayout>

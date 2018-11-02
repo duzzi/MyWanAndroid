@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#EFB63F</color>
+    <color name="textSelectColor">#333333</color>
+    <color name="textNormalColor">#999999</color>
+
+    <color name="transparentWhite70">#b2ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#1c761c</color>
+    <color name="red">#b40310</color>
+    <color name="blue">#FF0381A7</color>
+    <color name="purple">#500060</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="orange">#ea4c18</color>
+    <color name="bgColorWhite">#eeeeee</color>
+    <color name="textColor333">#333333</color>
+    <color name="textColor666">#666666</color>
+    <color name="textColor999">#999999</color>
+    <color name="bgEtGary">#dddddd</color>
+    <color name="bgWhiteF1">#f1f1f1</color>
+
+</resources>

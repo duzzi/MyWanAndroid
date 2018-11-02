@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_tool_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_12dp"
+        tools:context=".ui.activity.CommonWebsiteActivity">
+
+        <com.duzzi.uilib.viewgroup.FlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:flChildSpacing="14dp"
+            app:flChildSpacingForLastRow="4dp"
+            app:flRowSpacing="6dp"/>
+    </ScrollView>
+
+
+</LinearLayout>

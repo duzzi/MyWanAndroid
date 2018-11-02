@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_loading"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
+
+    <!--<ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>-->
+    <com.leo.simplearcloader.SimpleArcLoader
+        android:id="@+id/loader"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/margin_40dp"
+        custom:arc_colors="@array/load_colors"
+        custom:arc_margin="3dp"
+        custom:arc_speed="medium"
+        custom:arc_style="complete_arc">
+    </com.leo.simplearcloader.SimpleArcLoader>
+</LinearLayout>

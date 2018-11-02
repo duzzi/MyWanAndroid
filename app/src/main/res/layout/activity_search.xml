@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgWhiteF1"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_6dp"
+            android:paddingTop="@dimen/padding_6dp">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_bg_et_search"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:paddingEnd="@dimen/padding_12dp"
+                android:paddingStart="@dimen/padding_12dp"
+                android:textSize="@dimen/text_12sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginStart="@dimen/margin_12dp"
+                android:text="@string/search"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_16sp"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tag_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_12dp">
+
+    </com.zhy.view.flowlayout.TagFlowLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
