@@ -11,7 +11,7 @@ import com.duzzi.mywanandroid.R;
 public class Constants {
     public static final int DEFAULT_NEXT_PAGE = 1;
     public static final int DEFAULT_TIME_OUT = 10 * 1000;
-    public static String APK_URL = "";
+    public static String APK_URL = "https://www.pgyer.com/fnvM";
     public static final String HOST_WANANDROID = "http:www.wanandroid.com/";
     public static int[] sColorArray = {
             R.color.red,

@@ -18,8 +18,28 @@ android {
         }
         vectorDrawables.useSupportLibrary = true
     }
-    buildTypes {
+    signingConfigs {
+        debug {
+            keyAlias 'duzzi'
+            keyPassword '123456'
+            storeFile file('keystore.jks')
+            storePassword '123456'
+        }
         release {
+            keyAlias 'duzzi'
+            keyPassword '123456'
+            storeFile file('keystore.jks')
+            storePassword '123456'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
