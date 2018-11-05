@@ -4,7 +4,9 @@
 基于Material Design + MVP + Rxjava2 + Retrofit + Dagger2 + Glide
 
 ## Apk下载
-[点击下载](httpapp-global.pgyer.comec3595d9d4912b31c9d3762b8335a2de.apkattname=mywanandroid.apk&sign=e908f8c0fbefb4dcb169bbe6e2b2853d&t=5be06a54)
+[点击下载](https://www.pgyer.com/fnvM)
+
+
 ![avatar](https://www.pgyer.com/app/qrcode/fnvM)
 ## Thanks
 
