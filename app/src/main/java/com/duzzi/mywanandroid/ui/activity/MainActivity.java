@@ -1,9 +1,10 @@
 package com.duzzi.mywanandroid.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -24,11 +25,13 @@ import com.duzzi.mywanandroid.R;
 import com.duzzi.mywanandroid.base.activity.BaseActivity;
 import com.duzzi.mywanandroid.core.DataManager;
 import com.duzzi.mywanandroid.core.bean.event.EventMessage;
+import com.duzzi.mywanandroid.core.constant.Constants;
 import com.duzzi.mywanandroid.mvp.presenter.EmptyPresenter;
 import com.duzzi.mywanandroid.ui.fragment.HierarchyFragment;
 import com.duzzi.mywanandroid.ui.fragment.HomeFragment;
 import com.duzzi.mywanandroid.ui.fragment.NavigationFragment;
 import com.duzzi.mywanandroid.ui.fragment.ProjectContainerFragment;
+import com.duzzi.mywanandroid.util.ShareUtil;
 import com.duzzi.uilib.bottombar.BottomBarLayout;
 
 import org.greenrobot.eventbus.EventBus;
@@ -77,6 +80,8 @@ public class MainActivity extends BaseActivity<EmptyPresenter>
         if (eventMessage != null) {
             if (eventMessage.getEventType() == EventMessage.EVENT_REFRESH_USER_INFO) {
                 mTvAccount.setText(DataManager.getInstance().getLoginAccount());
+            }else if (eventMessage.getEventType()==EventMessage.EVENT_LOGOUT) {
+                mTvAccount.setText(R.string.click_to_login);
             }
         }
     }
@@ -98,8 +103,8 @@ public class MainActivity extends BaseActivity<EmptyPresenter>
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(toggle);
-        mIvAvatar = (ImageView) headerView.findViewById(R.id.iv_avatar);
-        mTvAccount = (TextView) headerView.findViewById(R.id.tv_account);
+        mIvAvatar = headerView.findViewById(R.id.iv_avatar);
+        mTvAccount = headerView.findViewById(R.id.tv_account);
 
         mIvAvatar.setOnClickListener(this);
         mTvAccount.setOnClickListener(this);
@@ -163,7 +168,7 @@ public class MainActivity extends BaseActivity<EmptyPresenter>
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -200,23 +205,25 @@ public class MainActivity extends BaseActivity<EmptyPresenter>
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            startActivity(new Intent(MainActivity.this, RxJava2Activity.class));
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_setting) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch (id) {
+            case R.id.nav_collect_list:
+                Snackbar.make(mToolbar, R.string.todo,Snackbar.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_setting:
+                ActivityUtils.startActivity(this, SettingsActivity.class);
+                break;
+            case R.id.nav_share:
+                ShareUtil.shareText(this, Constants.APK_URL);
+                break;
+            case R.id.nav_about:
+                ActivityUtils.startActivity(this, AboutActivity.class);
+                break;
+            default:
+                break;
         }
-
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

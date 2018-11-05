@@ -136,4 +136,6 @@
     <dimen name="size_14">14dp</dimen>
     <dimen name="size_16">16dp</dimen>
     <dimen name="size_18">18dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

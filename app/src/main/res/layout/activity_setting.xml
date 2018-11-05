@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgWhiteF1"
+    tools:context=".ui.activity.SettingsActivity">
+
+    <include layout="@layout/layout_tool_bar"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_margin="@dimen/margin_16dp"
+        android:layout_height="@dimen/height_44dp">
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/logout"
+            android:textSize="@dimen/text_16sp"
+            android:textColor="@color/textColor333"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal">
+        </TextView>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

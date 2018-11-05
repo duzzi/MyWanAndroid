@@ -7,6 +7,7 @@ import com.duzzi.mywanandroid.mvp.presenter.HierarchyArticlePresenter;
 import com.duzzi.mywanandroid.mvp.presenter.HotKeyPresenter;
 import com.duzzi.mywanandroid.mvp.presenter.KnowledgeHierarchyPresenter;
 import com.duzzi.mywanandroid.mvp.presenter.LoginPresenter;
+import com.duzzi.mywanandroid.mvp.presenter.LogoutPresenter;
 import com.duzzi.mywanandroid.mvp.presenter.NavigationPresenter;
 import com.duzzi.mywanandroid.mvp.presenter.ProjectCategoryPresenter;
 import com.duzzi.mywanandroid.mvp.presenter.ProjectListPresenter;
@@ -77,6 +78,11 @@ public class PresenterModule {
     @Provides
     LoginPresenter provideLoginPresenter() {
         return new LoginPresenter();
+    }
+
+    @Provides
+    LogoutPresenter provideLogoutPresenter() {
+        return new LogoutPresenter();
     }
 
     @Provides

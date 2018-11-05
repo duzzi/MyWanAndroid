@@ -15,6 +15,7 @@ import com.duzzi.mywanandroid.R;
 import com.duzzi.mywanandroid.base.activity.BaseActivity;
 import com.duzzi.mywanandroid.core.constant.Constants;
 import com.duzzi.mywanandroid.mvp.presenter.EmptyPresenter;
+import com.duzzi.mywanandroid.util.ShareUtil;
 import com.just.agentweb.AgentWeb;
 import com.just.agentweb.AgentWebConfig;
 
@@ -62,7 +63,7 @@ public class WebActivity extends BaseActivity<EmptyPresenter> {
         initToolBar();
         AgentWebConfig.clearDiskCache(this);
         mAgentWeb = AgentWeb.with(this)
-                .setAgentWebParent((LinearLayout) mLlParent,
+                .setAgentWebParent(mLlParent,
                         new LinearLayout.LayoutParams(-1, -1))
                 .useDefaultIndicator(mColorIndicator)
                 .createAgentWeb()
@@ -89,6 +90,7 @@ public class WebActivity extends BaseActivity<EmptyPresenter> {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_share:
+                ShareUtil.shareText(this, mLinkUrl);
                 break;
             case R.id.action_open_in_the_browser:
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(mLinkUrl)));

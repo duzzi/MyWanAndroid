@@ -8,11 +8,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-    <!-- To auto-complete the email text field in the register form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.READ_PROFILE"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-
     <!--
     在Android P系统的设备上，如果应用使用的是非加密的明文流量的http网络请求，
     则会导致该应用无法进行网络请求，https则不会受影响，
@@ -21,11 +16,11 @@
     <application
         android:name=".WanAndroidApp"
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_config"
         android:resizeableActivity="false"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
@@ -36,35 +31,61 @@
         <activity
             android:name=".ui.activity.MainActivity"
             android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".ui.activity.SplashActivity">
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.RxJava2Activity">
+        <activity
+            android:name=".ui.activity.RxJava2Activity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.activity.WebActivity">
+        <activity
+            android:name=".ui.activity.WebActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.activity.HierarchyActivity">
+        <activity
+            android:name=".ui.activity.HierarchyActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.activity.CommonWebsiteActivity">
+        <activity
+            android:name=".ui.activity.CommonWebsiteActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.activity.SearchActivity">
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.activity.TestActivity">
+        <activity
+            android:name=".ui.activity.TestActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".ui.activity.LoginActivity"
-            android:label="@string/title_activity_login">
-
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".ui.activity.RegisterActivity"
-            android:label="@string/title_activity_register">
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:label="@string/title_activity_settings">
         </activity>
     </application>
 

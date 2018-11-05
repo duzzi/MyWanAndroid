@@ -10,7 +10,8 @@ import com.duzzi.mywanandroid.R;
  */
 public class Constants {
     public static final int DEFAULT_NEXT_PAGE = 1;
-    public static final int DEFAULT_TIME_OUT = 1*1000;
+    public static final int DEFAULT_TIME_OUT = 10 * 1000;
+    public static String APK_URL = "";
     public static final String HOST_WANANDROID = "http:www.wanandroid.com/";
     public static int[] sColorArray = {
             R.color.red,
@@ -20,11 +21,13 @@ public class Constants {
             R.color.green,
             R.color.orange
     };
+
     public static class IntentKey {
         public static final String LINK_URL = "LINK_URL";
         public static final String CID = "CID";
         public static final String HIERARCHY_CHILDREN_BEAN_LIST = "HIERARCHY_CHILDREN_BEAN_LIST";
     }
+
     public static class Key {
         public static final String USER_INFO = "USER_INFO";
         public static final String USERNAME = "USERNAME";

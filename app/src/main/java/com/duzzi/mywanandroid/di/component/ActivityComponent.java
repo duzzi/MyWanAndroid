@@ -8,6 +8,7 @@ import com.duzzi.mywanandroid.ui.activity.HierarchyActivity;
 import com.duzzi.mywanandroid.ui.activity.LoginActivity;
 import com.duzzi.mywanandroid.ui.activity.RegisterActivity;
 import com.duzzi.mywanandroid.ui.activity.SearchActivity;
+import com.duzzi.mywanandroid.ui.activity.SettingsActivity;
 import com.duzzi.mywanandroid.ui.activity.SplashActivity;
 
 import dagger.Component;
@@ -33,4 +34,6 @@ public interface ActivityComponent {
     void inject(LoginActivity loginActivity);
 
     void inject(RegisterActivity registerActivity);
+
+    void inject(SettingsActivity settingsActivity);
 }

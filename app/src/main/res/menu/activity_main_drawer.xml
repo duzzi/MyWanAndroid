@@ -5,34 +5,48 @@
 
     <group android:checkableBehavior="none">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="camera"/>
-        <item
+            android:visible="false"
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="view"/>
+            android:title="@string/view"/>
         <item
             android:id="@+id/nav_slideshow"
+            android:visible="false"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow"/>
+            android:title="@string/slideshow"/>
+        <item
+            android:id="@+id/nav_collect_list"
+            android:icon="@drawable/ic_collect"
+            android:title="@string/my_collect"/>
         <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/setting"/>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/share"
+            android:visible="true"/>
+        <item
+            android:id="@+id/nav_about"
+            android:visible="true"
+            android:icon="@drawable/ic_about"
+            android:title="@string/about"/>
     </group>
 
-    <item android:title="">
+    <!--<item android:title="">
         <menu>
             <item
+                android:visible="true"
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share"/>
             <item
+                android:visible="false"
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send"/>
         </menu>
-    </item>
+    </item>-->
 
 </menu>
